@@ -1,0 +1,82 @@
+// companies tyles
+
+.companiesbg {
+  background: url("../img/backgrounds/companiesbg.jpg") no-repeat;
+}
+//ourportfolio Styles
+
+.ourportfolio {
+  padding: 50px 0;
+
+  figure {
+    position: relative;
+    overflow: hidden;
+
+    > img {
+      @include breakpoint(small) {
+        width: 100%;
+      }
+    }
+
+    .bottomlogo {
+      position: absolute;
+      bottom: 0;
+      background: #000;
+      width: 100%;
+      text-align: center;
+      @include transition(opacity 0.61s cubic-bezier(0.39, 0.58, 0.57, 1));
+      height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {}
+    }
+
+    figcaption {
+      opacity: 0;
+      visibility: hidden;
+
+      img {
+        margin: 25px 0;
+      }
+      background: -webkit-linear-gradient(to top, lighten($brand-secondary, 15%) 0%, $brand-secondary 100%);
+      background: linear-gradient(to top, lighten($brand-secondary, 15%) 0%, $brand-secondary 100%);
+      position: absolute;
+      padding: 8px 15px 15px;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      @include transition(all 0.61s cubic-bezier(0.39, 0.58, 0.57, 1));
+
+      a,
+      h4 {
+        font-weight: 700;
+        color: $brand-secondary;
+        font-size: 1rem;
+        font-weight: normal;
+      }
+
+      p {
+        color: $white;
+        margin: 20px 0;
+      }
+    }
+
+    &:hover {
+      .bottomlogo {
+        opacity: 0;
+      }
+
+      figcaption {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

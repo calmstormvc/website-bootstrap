@@ -1,0 +1,175 @@
+/* Slider Style */
+
+.midicals_slider {
+  overflow: hidden;
+  .carousel-inner {
+    overflow: visible;
+    .carousel-item{
+      @include breakpoint(small) {
+
+      display: flex;
+flex-direction: column;
+      }
+    }
+  }
+
+  .carousel-indicators {
+    margin-left: 0;
+    list-style: none;
+    padding-left: 160px;
+    width: 50%;
+    bottom: 12px;
+    justify-content: flex-start;
+    @include breakpoint(large) {
+      padding-left: 30px;
+      width: 65%;
+    }
+    @include breakpoint(small) {
+      margin: 0 0 0 45px;
+      width: 100%;
+    }
+
+    li {
+      &.active {
+        background-color: darken($brand-secondary, 70%);
+        opacity: 1;
+      }
+    }
+
+    .num {
+      background: none;
+      color: darken($brand-secondary, 70%);
+      position: absolute;
+      font-size: 1.05rem;
+      z-index: 5;
+      top: -35px;
+      text-indent: 0 !important;
+      font-size: 1.15rem;
+      width: 60px;
+
+      .current {
+        font-weight: bold;
+        color: darken($brand-secondary, 70%);
+        font-size: 1.45rem;
+      }
+    }
+  }
+  .carousel-control{
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    top: 0;
+    span {
+      background: $brand-primary;
+      width: 50px;
+      height: 50px;
+      opacity: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img{
+            max-width: 24px;
+      }
+    }
+  }
+  .carousel-control-next {
+    background-color: $brand-primary;
+    right: 0;
+  }
+  .carousel-control-prev {
+    left: 0;
+    @include transform(rotate(180deg));
+
+  }
+
+  .carousel-caption {
+    background: -webkit-linear-gradient(left, lighten($brand-secondary, 10%) 0%, $brand-secondary 100%);
+    background: linear-gradient(to right, lighten($brand-secondary, 10%) 0%, $brand-secondary 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 15px 50px 30px 160px;
+    width: 41.7%;
+    text-align: left;
+    @include breakpoint(large) {
+      padding-left: 30px;
+      width: 65%;
+    }
+    @include breakpoint(small) {
+          padding: 15px 15px 15px 80px;
+
+      width: 100%;
+
+    position: relative;
+    }
+
+    .slider-head {
+      margin-bottom: 20px;
+      position: relative;
+      top: -50px;
+      @include breakpoint(small) {
+
+      }
+    }
+
+    a.l_more {
+      color: #fff;
+      font-size: 1.15rem;
+      font-family: 'Circular Std Book';
+      display: block;
+      font-weight: normal;
+      @include breakpoint(small) {
+        font-size: 1rem;
+      }
+    }
+
+    h2 {
+      font-size: 2.80rem;
+      background: $brand-primary;
+      color: #fff;
+      padding: 10px;
+      margin: 0 0 3px;
+      max-width: 280px;
+      display: block;
+      text-align: center;
+      @include text-truncate;
+      @include breakpoint(medium) {
+        font-size: 1.80rem;
+        max-width: 230px;
+      }
+    }
+
+    h5 {
+      background: $brand-primary;
+      color: #fff;
+      padding: 10px;
+      display: inline-block;
+      margin-bottom: 40px;
+      font-weight: normal;
+      font-family: 'Circular Std Book';
+      @include text-truncate;
+      @include breakpoint(small) {
+        font-size: 1rem;
+      }
+    }
+
+    blockquote {
+      font-size: 1.25rem;
+      color: $white;
+      margin-bottom: 24px;
+      position: relative;
+      line-height: 30px;
+      font-family: 'Circular Std Book';
+
+      &:before {
+        content: '';
+        background: url("../img/quotes.svg") no-repeat;
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
