@@ -2,13 +2,21 @@
 
 .midicals_slider {
   overflow: hidden;
+  article{
+    padding: 0 0 80px;
+    p{
+      font-size: 1.35rem;
+      line-height: 30px;
+    }
+  }
   .carousel-inner {
     overflow: visible;
-    .carousel-item{
-      @include breakpoint(small) {
 
+    .carousel-item{
+        max-height: 667px;
+      @include breakpoint(small) {
       display: flex;
-flex-direction: column;
+      flex-direction: column;
       }
     }
   }

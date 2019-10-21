@@ -16,6 +16,8 @@ overflow: hidden;
 .centeralign{
   position: absolute;
   @include center(y);
+  width: 100%;
+
 }
   @include breakpoint(small) {
     min-height: 100%;
@@ -29,6 +31,12 @@ overflow: hidden;
   }
 
   article {
+    h4{
+      font-size: 1.41rem;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: 1px;
+    }
     h2 {
       background: -webkit-linear-gradient(left, lighten($brand-secondary, 10%) 0%, $brand-secondary 100%);
       background: linear-gradient(to right, lighten($brand-secondary, 10%) 0%, $brand-secondary 100%);
@@ -95,6 +103,7 @@ overflow: hidden;
     overflow: hidden;
 
     img {
+        width: 100%;
       @include breakpoint(small) {
         width: 100%;
       }
@@ -147,6 +156,33 @@ overflow: hidden;
 
       img {
         margin-right: 15px;
+      }
+    }
+  }
+}
+//support
+
+.support{
+  padding: 80px 0;
+  article{
+    h2{
+      margin-bottom: 80px;
+    }
+  }
+  figure{
+    text-align: center;
+    .iconboxed{
+      margin-bottom: 10px;
+      width: 200px;
+      height: 200px;
+    }
+    figcaption{
+      h4{
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+      p{
+        font-size: 1.25rem;
       }
     }
   }
