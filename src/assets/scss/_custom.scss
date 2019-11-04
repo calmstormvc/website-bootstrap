@@ -383,6 +383,12 @@ a {
 
 }
 
+iframe.is-typeform {
+  width: 100%;
+  min-height: 660px;
+  border: none;
+}
+
 // 3-General Classes
 .svgicon {
   max-width: 16px;
